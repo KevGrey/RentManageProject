@@ -1,0 +1,4 @@
+go run main.go --mem=mem.pprof
+go tool pprof =http=":8881" mem.pprof
+go run main.go --mem=mem_old.pprof
+go tool pprof -http=":8881" -base mem.pprof mem_old.pprof

@@ -1,0 +1,62 @@
+server:
+  name: "project_project"
+  addr: "127.0.0.1:8081"
+
+zap:
+  DebugFileName: "/Users/zuoliang/Documents/go_project/ms_project/logs/debug/project-debug.log"
+  InfoFileName: "/Users/zuoliang/Documents/go_project/ms_project/logs/error/project-info.log"
+  WarnFileName: "/Users/zuoliang/Documents/go_project/ms_project/logs/info/project-error.log"
+  MaxSize: 500,
+  MaxAge: 28,
+  MaxBackups: 3,
+
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+
+grpc:
+  addr: "127.0.0.1:8882"
+  name: "project"
+  version: "1.0.0"
+  weight: 2
+
+etcd:
+  addrs:
+    - "127.0.0.1:2379"
+
+mysql:
+  username: root
+  password: root
+  host: 127.0.0.1
+  port: 3309
+  db: msproject
+db:
+  separation: true
+  master:
+    name: master
+    username: root
+    password: root
+    host: 127.0.0.1
+    port: 3309
+    db: msproject
+  slave:
+    - username: root
+      password: root
+      host: 127.0.0.1
+      port: 3309
+      db: msproject
+      name: slave1
+    - username: root
+      password: root
+      host: 127.0.0.1
+      port: 3309
+      db: msproject
+      name: slave2
+jwt:
+  accessExp: 7
+  refreshExp: 14
+  accessSecret: msproject
+  refreshSecret: msproject
+

@@ -1,0 +1,2 @@
+运行指令
+./go-stress-testing-mac -c 10 -n 100 -p ./task.selfList

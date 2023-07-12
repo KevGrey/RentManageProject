@@ -1,0 +1,1 @@
+protoc --go_out=./gen_account --go_opt=paths=source_relative --go-grpc_out=./gen_account --go-grpc_opt=paths=source_relative  account_service.proto
